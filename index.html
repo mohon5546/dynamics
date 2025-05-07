@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Experience AI-powered Dynamics 365 solutions from AIPPE Insights. Transform your business with Microsoft Dynamics CRM and ERP cloud services.">
+    <meta name="keywords" content="Dynamics 365, Microsoft Dynamics, CRM, ERP, AI Business Solutions, AIPPE Insights, Cloud ERP, Business Automation">
+    <meta name="author" content="AIPPE Insights">
+    <meta property="og:title" content="AI-Powered Dynamics 365 Solutions | AIPPE Insights">
+    <meta property="og:description" content="Transform your business with our AI-enhanced Microsoft Dynamics 365 implementations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aippe.insights.dynamics.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>AI-Powered Dynamics 365 Solutions | AIPPE Insights</title>
+    <link rel="canonical" href="https://aippe.insights.dynamics.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #005a9e;
+            --secondary: #ffb900;
+            --dark: #002050;
+            --light: #f3f2f1;
+            --text: #323130;
+            --gray: #8a8886;
+            --success: #107c10;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: #fff;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--primary);
+            transition: all 0.3s ease;
+        }
+        
+        a:hover {
+            color: var(--secondary);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            font-weight: 500;
+            color: var(--text);
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: var(--text);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            background-color: white;
+            color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .feature-card:hover .feature-img img {
+            transform: scale(1.1);
+        }
+        
+        .feature-content {
+            padding: 25px;
+        }
+        
+        .feature-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        /* Demo Section */
+        .demo {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .demo-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .demo-content {
+            flex: 1;
+        }
+        
+        .demo-video {
+            flex: 1;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .demo-video img {
+            width: 100%;
+            display: block;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--light);
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text:before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--secondary);
+            opacity: 0.2;
+            position: absolute;
+            top: -20px;
+            left: -10px;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 15px;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            font-size: 1rem;
+        }
+        
+        .author-info p {
+            margin-bottom: 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Contact Form */
+        .contact {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-container {
+            display: flex;
+            gap: 50px;
+        }
+        
+        .contact-info {
+            flex: 1;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .info-item i {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-form {
+            flex: 1;
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 8px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 90, 158, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #ccc;
+        }
+        
+        .footer-col ul li a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary);
+            color: var(--text);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .demo-container, .contact-container {
+                flex-direction: column;
+            }
+            
+            .demo-content, .demo-video, .contact-info, .contact-form {
+                flex: none;
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="https://aippe.insights.dynamics.com/images/logo.png" alt="AIPPE Insights Logo" width="120" height="40">
+                <span class="logo-text">AIPPE Insights</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Transform Your Business with AI-Powered Dynamics 365</h1>
+            <p>Discover how our cutting-edge AI solutions integrated with Microsoft Dynamics 365 can streamline your operations, enhance customer experiences, and drive growth.</p>
+            <a href="#demo" class="cta-button">View Demo</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+                <p>Our AI-enhanced Dynamics 365 solutions deliver powerful capabilities for your business</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://aippe.insights.dynamics.com/images/ai-crm.jpg" alt="AI-Powered CRM" width="400" height="300">
+                    </div>
+                    <div class="feature-content">
+                        <h3>AI-Driven Customer Insights</h3>
+                        <p>Leverage predictive analytics and machine learning to understand customer behavior, anticipate needs, and personalize interactions at scale.</p>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://aippe.insights.dynamics.com/images/automation.jpg" alt="Business Process Automation" width="400" height="300">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Intelligent Process Automation</h3>
+                        <p>Automate complex business processes with AI that learns and adapts to your unique workflows, reducing manual effort by up to 80%.</p>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img">
+                        <img src="https://aippe.insights.dynamics.com/images/reporting.jpg" alt="Advanced Analytics" width="400" height="300">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Advanced Analytics & Reporting</h3>
+                        <p>Get real-time, actionable insights with our AI-powered dashboards and predictive reporting tools that surface what matters most.</p>
+                        <a href="#">Learn more →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <div class="section-title">
+                <h2>See It In Action</h2>
+                <p>Watch how our AI-powered Dynamics 365 solutions can transform your business operations</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-content">
+                    <h3>Experience the Power of AI in Dynamics 365</h3>
+                    <p>Our demo showcases how artificial intelligence seamlessly integrates with Microsoft Dynamics 365 to deliver:</p>
+                    <ul style="margin-left: 20px; margin-bottom: 20px;">
+                        <li>Automated customer segmentation and targeting</li>
+                        <li>Predictive lead scoring and opportunity management</li>
+                        <li>Intelligent inventory forecasting and supply chain optimization</li>
+                        <li>Natural language processing for enhanced customer service</li>
+                    </ul>
+                    <p>See firsthand how these capabilities can drive efficiency, reduce costs, and increase revenue for your organization.</p>
+                    <a href="#contact" class="cta-button">Request Personalized Demo</a>
+                </div>
+                <div class="demo-video">
+                    <img src="https://aippe.insights.dynamics.com/images/demo-screenshot.jpg" alt="Dynamics 365 AI Demo Screenshot" width="600" height="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Hear from businesses that have transformed with our AI-powered Dynamics solutions</p>
+            </div>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>Implementing AIPPE's AI solutions with Dynamics 365 has revolutionized our customer service operations. Our response times improved by 65% and customer satisfaction scores are at an all-time high.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://aippe.insights.dynamics.com/images/client1.jpg" alt="Sarah Johnson" width="50" height="50">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>COO, Retail Solutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>The predictive analytics capabilities have given us unprecedented visibility into our supply chain. We've reduced inventory costs by 30% while maintaining 99% fulfillment rates.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://aippe.insights.dynamics.com/images/client2.jpg" alt="Michael Chen" width="50" height="50">
+                        <div class="author-info">
+                            <h4>Michael Chen</h4>
+                            <p>Director of Operations, Global Manufacturing</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        <p>As a financial services firm, the AI-powered risk assessment tools integrated with Dynamics have been game-changing. We've improved detection of high-risk clients by 40% while reducing false positives.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://aippe.insights.dynamics.com/images/client3.jpg" alt="David Rodriguez" width="50" height="50">
+                        <div class="author-info">
+                            <h4>David Rodriguez</h4>
+                            <p>VP of Compliance, First Financial Group</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to explore how AI-powered Dynamics 365 can transform your business?</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>123 Dynamics Way, Suite 500<br>San Francisco, CA 94107</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+1 (800) 555-DYNA</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@aippe.insights.dynamics.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Business Hours</h4>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday - Sunday: Closed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form id="contactForm" action="https://aippe.insights.dynamics.com/contact" method="POST">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input type="text" id="company" name="company" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="interest">Interest in</label>
+                            <select id="interest" name="interest" class="form-control" required>
+                                <option value="">Select an option</option>
+                                <option value="dynamics-sales">Dynamics 365 Sales</option>
+                                <option value="dynamics-customer-service">Dynamics 365 Customer Service</option>
+                                <option value="dynamics-finance">Dynamics 365 Finance</option>
+                                <option value="dynamics-supply-chain">Dynamics 365 Supply Chain</option>
+                                <option value="dynamics-marketing">Dynamics 365 Marketing</option>
+                                <option value="custom-solution">Custom AI Solution</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>About AIPPE Insights</h3>
+                    <p>We specialize in AI-powered Microsoft Dynamics 365 implementations that drive digital transformation and business growth.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="#">Dynamics 365 Sales</a></li>
+                        <li><a href="#">Dynamics 365 Customer Service</a></li>
+                        <li><a href="#">Dynamics 365 Finance</a></li>
+                        <li><a href="#">Dynamics 365 Supply Chain</a></li>
+                        <li><a href="#">Dynamics 365 Marketing</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Whitepapers</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Leadership</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 AIPPE Insights. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            const nav = document.querySelector('nav ul');
+            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const nav = document.querySelector('nav ul');
+                    if (window.getComputedStyle(nav).display === 'flex') {
+                        nav.style.display = 'none';
+                    }
+                }
+            });
+        });
+
+        // Contact Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Form validation
+            const form = e.target;
+            const formData = new FormData(form);
+            let isValid = true;
+            
+            // Simple validation - in a real app you'd want more robust validation
+            formData.forEach((value, key) => {
+                if (key !== 'phone' && !value.trim()) {
+                    isValid = false;
+                    const input = form.querySelector(`[name="${key}"]`);
+                    input.style.borderColor = 'red';
+                    
+                    // Remove error style when user starts typing
+                    input.addEventListener('input', function() {
+                        this.style.borderColor = '#ddd';
+                    });
+                }
+            });
+            
+            if (!isValid) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+            // In a real implementation, you would send the form data to your server here
+            // For demo purposes, we'll just show a success message
+            alert('Thank you for your message! We will contact you shortly.');
+            form.reset();
+            
+            // You would typically use fetch or AJAX to submit the form
+            /*
+            fetch(form.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Thank you for your message! We will contact you shortly.');
+                form.reset();
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('There was an error submitting your form. Please try again.');
+            });
+            */
+        });
+
+        // Responsive adjustments
+        function handleResponsive() {
+            const nav = document.querySelector('nav ul');
+            if (window.innerWidth > 768) {
+                nav.style.display = 'flex';
+            } else {
+                nav.style.display = 'none';
+            }
+        }
+
+        window.addEventListener('resize', handleResponsive);
+        window.addEventListener('load', handleResponsive);
+    </script>
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AIPPE Insights",
+        "url": "https://aippe.insights.dynamics.com",
+        "logo": "https://aippe.insights.dynamics.com/images/logo.png",
+        "sameAs": [
+            "https://www.linkedin.com/company/aippe-insights",
+            "https://twitter.com/aippeinsights",
+            "https://www.facebook.com/aippeinsights"
+        ],
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+1-800-555-DYNA",
+            "contactType": "customer service",
+            "email": "info@aippe.insights.dynamics.com",
+            "areaServed": "US"
+        }
+    }
+    </script>
+</body>
+</html>
